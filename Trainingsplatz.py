@@ -22,5 +22,5 @@ def Testspiel(submission, gegner = "random"):
 agent = "submission.py"
 
 # Spielen des Testspiels gegen drei "random" Agents
-# Es kann, wenn gewünscht, der Dateiname eines anderen gegnerischen Agenten übergeben werden
+# Es kann, wenn gewünscht, der Dateiname eines anderen gegnerischen Agenten übergeben werden (z.B. "idleBot.py")
 Testspiel(agent)
