@@ -4,11 +4,11 @@ from kaggle_environments import make, evaluate
 
 '''Trainingsplatz zum testen der programmierten Bots.'''
 
-def Testspiel(submission):
+def Testspiel(submission, gegner = "random"):
 
     # Erstellen des Spieles und Angabe der spielenden Submissions
     env = make("halite", debug=True)
-    env.run([submission, "random", "random", "random"])
+    env.run([submission, gegner, gegner, gegner])
 
     # Rendern des Spielablaufes und Ausgabe als html-Datei
     out = env.render(mode="html")
@@ -18,15 +18,9 @@ def Testspiel(submission):
     print("Spielende! Der Spielablauf befindet sich in der Datei wiederholung.html")
 
 
-def Evaluation(submission):
-    # Fehler? Zurzeit wird 5 mal das gleiche Spiel wiederholt
-    agents = [submission, "random", "random", "random"]
-    rewards = evaluate("halite",agents,num_episodes=5,debug = True)
-    print(rewards)
-
-
-
-# Load an agent from a file.
+# Lade den Agent aus der Datei
 agent = "submission.py"
 
+# Spielen des Testspiels gegen drei "random" Agents
+# Es kann, wenn gewünscht, der Dateiname eines anderen gegnerischen Agenten übergeben werden
 Testspiel(agent)
