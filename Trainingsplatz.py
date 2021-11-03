@@ -10,7 +10,7 @@ def Testspiel(submission, gegner = "random"):
     env = make("halite", debug=True)
     env.run([submission, gegner, gegner, gegner])
 
-    # Rendern des Spielablaufes und Ausgabe als html-Datei
+    # Rendern des Spielablaufes und Ausgabe als html-Datei (Ihrer ist dabei der gelbe Bot)
     out = env.render(mode="html")
     f = open('wiederholung.html','w')
     f.write(out)
