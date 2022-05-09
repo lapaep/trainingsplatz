@@ -31,4 +31,4 @@ Geben Sie ein: ```git: clone``` + eingabe der URL
 
 Erstellen Sie einen Ordner in Ihrem Laufwerk.
 
-
+Setzen Sie nun als Agent in ```Trainingsplatz.py```, den Pfad zu Ihrer submission.py ein und führen Sie anschließend das Programm aus. Es wird nun eine Episode gespielt und als ```.html``` gerendert.
